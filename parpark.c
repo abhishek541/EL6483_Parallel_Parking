@@ -10,6 +10,35 @@
 
 #include "foo.h"
 
+//Ultrasonic definitions
+#define Ultra_Left_Echo     GPIO_Pin_11
+#define Ultra_Left_EchoLine   EXTI_Line0
+#define Ultra_Left_EchoIRQ  EXTI0_1_IRQn
+
+#define Ultra_Right_Echo     GPIO_Pin_6
+#define Ultra_Right_EchoLine   EXTI_Line1
+#define Ultra_Right_EchoIRQ  EXTI0_1_IRQn
+
+#define Ultra_Middle_Echo     GPIO_Pin_13
+#define Ultra_Middle_EchoLine   EXTI_Line1
+#define Ultra_Middle_EchoIRQ  EXTI0_1_IRQn
+
+#define SR04_TIMIRQ   TIM2_IRQn
+#define SR04_Prescaler  2
+#define SR04_Trig     GPIO_Pin_0
+
+#define SR04_GPIO     GPIOA
+#define SR04_Timer    TIM2
+
+#define FallingEdge 0
+#define RisingEdge 1
+
+void send_pulse() {
+
+}
+
+
+
 int main()
 {
   /*
@@ -20,6 +49,7 @@ int main()
     Initialize the GPIO (General-Purpose I/O) subsystem pins that are connected to the LEDs on the board:
    */
   board_led_init();
+#ifndef HAL_COMMON_INCLUDES_H
 
   int i = 0;
 
