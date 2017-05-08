@@ -20,14 +20,14 @@ static void button_gpio_init(void)
 
 	HAL_GPIO_Init(GPIOE, &GPIO_InitStruct); // Done
 
-	GPIO_InitStruct.Pin = GPIO_PIN_6;
+	GPIO_InitStruct.Pin = GPIO_PIN_10;
 	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
 	GPIO_InitStruct.Pull = GPIO_PULLDOWN;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 
 	__HAL_RCC_GPIOF_CLK_ENABLE(); // Enable clock to GPIOF so PF6 works
 
-	HAL_GPIO_Init(GPIOF, &GPIO_InitStruct); // Done
+	HAL_GPIO_Init(GPIOE, &GPIO_InitStruct); // Done
 
 	GPIO_InitStruct.Pin = GPIO_PIN_13;
 	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;

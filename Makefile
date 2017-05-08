@@ -1,7 +1,7 @@
 # Based on https://github.com/sergioprado/bare-metal-arm/blob/master/Makefile
 # But heavily-edited for our purposes:
 # (c) Abhimanyu Ghosh, 2016
-TOOLCHAIN_ROOT=../../../../gcc-arm-none-eabi-5_4-2016q3
+TOOLCHAIN_ROOT=../../gcc-arm-none-eabi-5_4-2016q3
 TOOLCHAIN=$(TOOLCHAIN_ROOT)/bin/
 PREFIX=$(TOOLCHAIN)/arm-none-eabi-
 
